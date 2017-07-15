@@ -13,10 +13,46 @@
     <!--<![endif]-->
 </head>
 <body>
+    <style type="text/css">
+        a:link { text-decoration: none;}
+        a:visited { text-decoration: none;}
+        a:hover { text-decoration: none;}
+    </style>
+    <style scoped>
+        @import url('https://fonts.googleapis.com/css?family=Pacifico');
+        .text-paperbox {
+            font-family: 'Pacifico', cursive;
+        }
+        .button-twitter,
+        .button-tistory,
+        .button-github,
+        .button-contribute,
+        .button-translate {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }                
+        .button-twitter {
+            background: rgb(66, 184, 221);
+        }
+        .button-tistory {
+            background: rgb(255, 102, 0);
+        }
+        .button-github {
+            background: rgb(204, 0, 153);
+        }
+        .button-contribute {
+            background: rgb(202, 60, 60);
+        }
+        .button-translate {
+            background: rgb(0, 51, 153);
+        }
+    </style>
     <div id="layout">
         <!-- Menu toggle -->
         <a href="#menu" id="menuLink" class="menu-link">
             <!-- Hamburger icon -->
+            <span></span>
         </a>
 
         <div id="menu">
@@ -32,49 +68,17 @@
 
         <div id="main">
             <div class="header">
-                <h1>Welcome to Paperbox's Web Space</h1>
+                <h1>Welcome to <span class="text-paperbox">Paperbox</span>'s Web Space</h1>
                 <h2>종이상자의 웹 공간에 오신 것을 환영합니다</h2>
             </div>
 
             <div class="content">
-                <style type="text/css">
-                    a:link { text-decoration: none;}
-                    a:visited { text-decoration: none;}
-                    a:hover { text-decoration: none;}
-                </style>
-                <style scoped>
-                    .button-twitter,
-                    .button-tistory,
-                    .button-github,
-                    .button-contribute,
-                    .button-translate {
-                        color: white;
-                        border-radius: 4px;
-                        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-                    }
-                
-                    .button-twitter {
-                        background: rgb(66, 184, 221);
-                    }
-                    .button-tistory {
-                        background: rgb(255, 102, 0);
-                    }
-                    .button-github {
-                        background: rgb(204, 0, 153);
-                    }
-                    .button-contribute {
-                        background: rgb(202, 60, 60);
-                    }
-                    .button-translate {
-                        background: rgb(0, 51, 153);
-                    }
-                </style>
                 <a href="http://twitter.com/lego37yoon">
                     <button class="button-twitter pure-button">
                         <i class="fa fa-twitter" aria-hidden="true">트위터(Twitter)</i>
                     </button>
                 </a>
-                <a href="http://pb.areatm.com">
+                <a href="http://pbdiary.pw">
                     <button class="button-tistory pure-button">
                         <i class="fa fa-rss" aria-hidden="true">블로그(Blog)</i>
                     </button>
@@ -110,24 +114,30 @@
                         <i class="fa fa-language" aria-hidden="true">English</i>
                      </button>
                 </a>
-                <h2 class="content-subhead">서버 접속 / Connect to Server</h2>
-                <p>Paperbox has Three web servers. Please Choose One.</p>
-                <p>종이상자는 자체서버 1개와 무료 호스팅 2개로 3가지 서버가 있습니다. 용도는 모두 다르며 필요에 따라 고르시면 됩니다.</p><br />
-                    <a href="./index.html">
-                        <button class="pure-button">
-                            <i class="fa fa-server" aria-hidden="true">서버 지라치? - Server Jirachi</i>
-                        </button>
-                    </a>
-                    <a href="http://latias.cf">
-                        <button class="pure-button">
-                            <i class="fa fa-server" aria-hidden="true">서버 라티아스! - Server Latias</i>
-                        </button>
-                    </a>
-                    <a href="http://nympia.cf">
-                        <button class="pure-button">
-                            <i class="fa fa-server" aria-hidden="true">서버 님피아♥ - Server Nympia</i>
-                        </button>
-                    </a>
+                <h2 class="content-subhead">서비스 바로가기 / Link for Our Services</h2>
+                <p>paperbox operates some services in each other servers. pls select one for yourself.</p>
+                <p>thanks for previous provider for this page, Storynetworks(Korean Non-Profit Organization that provides web hosting. this organization closed on 2016.06.30.)</p>
+                <p>현재 서비스를 여러 서버에서 나눠 분담하고 있습니다. 이전까지 서버를 제공해 주셨던 이야기네트워크(2016.06.30부로 서비스 종료)에게 감사드립니다.</p><br />
+                <a href="https://latios.pbdiary.pw">
+                    <button class="pure-button">
+                        <i class="fa fa-server" aria-hidden="true">서버 라티오스 - Server Latios</i>
+                    </button>
+                </a>
+                <p>For About pages, Remember 0416 pages, ThankYouStorynetworks pages. You can find about Team.YBS, Team.fLASH, and paperbox.</p>
+                <p>안내 페이지, 세월호 추모 페이지, 이야기네트워크 기억 페이지 및 Team.YBS, Team.fLASH, 그리고 종이상자 본인에 대한 정보를 알려드립니다. 여기서 종이상자의 작업물들을 내려받으실 수도 있습니다.</p>
+                <a href="http://latias.pbdiary.pw">
+                    <button class="pure-button">
+                        <i class="fa fa-server" aria-hidden="true">서버 라티아스! - Server Latias</i>
+                    </button>
+                </a>
+                <p>Operating on Raspberry Pi 2 Model B rev.1.2, this server provides DORAN, HaneulGureum service.</p>
+                <p>라즈베리파이 2 Model B 리비전 1.2에서 구동되며, 도란 및 하늘구름 서비스를 제공합니다.</p>
+                <a href="http://nympia.cf">
+                    <button class="pure-button">
+                        <i class="fa fa-server" aria-hidden="true">서버 님피아 ♥ - Server Nympia ♥</i>
+                    </button>
+                </a>
+                <p>Operating at UHostAll service and this server provides wiki for FAQ.</p>
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <!-- Paperdev -->
                 <ins class="adsbygoogle"
@@ -139,10 +149,11 @@
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
                 <p>
-                    ©2013.02~2016 종이상자(paperbox/하늘꿈). 일부 권리 보유. <br />
-                    ©2013.02~2016 paperbox(HanuelGgum). Some rights reserved. <br />
-                    Made with ♥, <a href="http://purecss.io/">Pure 0.6.6</a>, FontAwesome Project.
-                    Jirachi Server Provider - <a href="http://storynetworks.kr">StoryNetworks(이야기네트워크)</a>
+                    ©2013.02~2017 종이상자(paperbox). 일부 권리 보유. <br />
+                    ©2013.02~2017 paperbox. Some rights reserved. <br />
+                    Made with ♥, <a href="http://purecss.io/">Pure 1.0.0</a>, FontAwesome Project.
+                    Thanks for previous Jirachi Server Provider - <a href="http://storynetworks.kr">StoryNetworks(이야기네트워크)</a>
+                    Latios Server is based on <a href="https://pages.github.com">Github Pages</a> powered.
                     Latias Server is Own Server and Powered by Raspberry Pi 2 Model B
                     Nympia Server Provider - <a href="http://vastserve.com">UHostAll</a>
                 </p>
