@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="team.fLASH 공식 웹사이트">
+    <title>게임개발동아리 team fLASH</title>
+    <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <!--<![endif]-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <link rel="stylesheet" href="css/layouts/marketing.css">
+        <!--<![endif]-->
+</head>
+<body>
+<style>
+body, div, p, h2 {
+    font-family: 'BM JUA', sans-serif;
+}
+.font-flash {
+    font-family: 'Racing Sans One', cursive;
+}
+.custom-menu-wrapper {
+    background-color: #00E5FF;
+    margin-bottom: 2.5em;
+    white-space: nowrap;
+    position: relative;
+}
+
+.custom-menu {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+}
+
+.custom-menu .pure-menu-link,
+.custom-menu .pure-menu-heading {
+    color: white;
+}
+
+.custom-menu .pure-menu-link:hover,
+.custom-menu .pure-menu-heading:hover {
+    background-color: transparent;
+}
+
+.custom-menu-top {
+    position: relative;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.custom-menu-brand {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+.custom-menu-toggle {
+    width: 44px;
+    height: 44px;
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    display: none;
+}
+
+.custom-menu-toggle .bar {
+    background-color: white;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 100px;
+    position: absolute;
+    top: 22px;
+    right: 12px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.custom-menu-toggle .bar:first-child {
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+}
+
+.custom-menu-toggle.x .bar {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.custom-menu-toggle.x .bar:first-child {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.custom-menu-screen {
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    height: 3em;
+    width: 70em;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.custom-menu-tucked .custom-menu-screen {
+    -webkit-transform: translateY(-44px);
+    -moz-transform: translateY(-44px);
+    -ms-transform: translateY(-44px);
+    transform: translateY(-44px);
+}
+
+@media (max-width: 62em) {
+
+    .custom-menu {
+        display: block;
+    }
+
+    .custom-menu-toggle {
+        display: block;
+        display: none\9;
+    }
+
+    .custom-menu-bottom {
+        position: absolute;
+        width: 100%;
+        border-top: 1px solid #eee;
+        background-color: #808080\9;
+        z-index: 100;
+    }
+
+    .custom-menu-bottom .pure-menu-link {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+    .custom-menu-bottom.custom-menu-tucked .pure-menu-link {
+        -webkit-transform: translateX(-140px);
+        -moz-transform: translateX(-140px);
+        -ms-transform: translateX(-140px);
+        transform: translateX(-140px);
+        opacity: 0;
+        opacity: 1\9;
+    }
+
+    .pure-menu-horizontal.custom-menu-tucked {
+        z-index: -1;
+        top: 45px;
+        position: absolute;
+        overflow: hidden;
+    }
+
+}
+</style>
+<div class="header">
+    <div class="home-menu pure-menu-fixed pure-menu pure-menu-horizontal pure-menu-scrollable" id="tuckedMenu">
+        <a href="#" class="pure-menu-heading custom-menu-brand"><span class="font-flash">team.fLASH</span></a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="./about.html" class="pure-menu-link"><span class="font-flash">fLASH</span>는</a></li>
+            <li class="pure-menu-item"><a href="./speedy.html" class="pure-menu-link">Speedy</a></li>
+            <li class="pure-menu-item"><a href="./illeat.html" class="pure-menu-link">내가먹을래</a></li>
+            <li class="pure-menu-item"><a href="https://twitter.com/isdjflash" class="pure-menu-link">공식트위터</a></li>
+            <li class="pure-menu-item"><a href="http://pbdiary.pw/category/PaperDev/team.fLASH%20%EC%86%8C%EC%8B%9D" class="pure-menu-link">team.fLASH 공식블로그</a></li>
+            <li class="pure-menu-item"><a href="../index.html" class="pure-menu-link">Paperbox</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="splash-container">
+    <div class="splash">
+        <h1 class="splash-head">일산대진 게임개발 동아리, fLASH</h1>
+        <p class="splash-subhead">
+            안드로이드 / HTML5 / 윈도우용 게임 Speedy를 개발하는 일산대진고 자율동아리입니다.
+        </p>
+        <p>
+            <a href="./about.html" class="pure-button pure-button-primary">team.fLASH는?</a>
+        </p>
+    </div>
+</div>
+
+<div class="content-wrapper">
+    <div class="content">
+        <h2 class="content-head is-center">생각의 방향을 바꿉니다.</h2>
+
+        <div class="pure-g">
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+
+                <h3 class="content-subhead">
+                    <i class="fa fa-bicycle"></i>
+                    Speedy
+                </h3>
+                <p>
+                    2D 휭스크롤 자전거 레이싱 게임
+                </p>
+                <a href="https://github.com/flashdevelopers/speedy">Github에서 만나기</a>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+                    <i class="fa fa-question"></i>
+                    내가 먹을래
+                </h3>
+                <p>
+                    준비중인 두더지 게임입니다. 2017년 말~2018년 출시예정
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ribbon l-box-lrg pure-g">
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+            <h2 class="content-head content-head-ribbon">언리얼 엔진을 사용합니다.</h2>
+            <p>쉽고 빠른 개발을 위하여 BluePrint를 이용합니다.</p>
+            <p>언리얼 엔진을 사용하기에 Windows, Linux, Android 및 HTML 5 환경을 지원합니다.
+            </p>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2 class="content-head is-center"><span class="font-flash">team.fLASH</span>와 함께하세요.</h2>
+            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+                <h4>연락처</h4>
+                <p>
+                    공식 트위터: <a href="https://twitter.com/isdjflash">@isdjflash</a>
+                </p>
+                <p>
+                    공식 블로그: <a href="http://pbdiary.pw/">PaperDev > team.fLASH 소식</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer l-box is-center">
+        ©2017- <span class="font-flash">team.fLASH</span>. Hosted by Github Pages / With Paperbox
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>
