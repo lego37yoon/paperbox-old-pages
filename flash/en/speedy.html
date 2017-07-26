@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Multi Platform Bike Racing Game Speedy">
+    <title>Speedy - team.fLASH</title>
+    <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <!--<![endif]-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <link rel="stylesheet" href="css/layouts/marketing.css">
+        <!--<![endif]-->
+</head>
+<body>
+<style>
+@font-face {
+font-family: 'Busan';
+font-style: normal;
+font-weight: 400;
+src: url('//cdn.jsdelivr.net/korean-webfonts/1/orgs/govs/busan/Busan/Busan.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/orgs/govs/busan/Busan/Busan.woff') format('woff');
+}
+
+body, p, h2, a, h3 {
+    font-family: 'Busan', sans-serif;
+}
+.font-flash {
+    font-family: 'Racing Sans One', cursive;
+}
+.custom-menu-wrapper {
+    background-color: #00E5FF;
+    margin-bottom: 2.5em;
+    white-space: nowrap;
+    position: relative;
+}
+
+.custom-menu {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+}
+
+.custom-menu .pure-menu-link,
+.custom-menu .pure-menu-heading {
+    color: white;
+}
+
+.custom-menu .pure-menu-link:hover,
+.custom-menu .pure-menu-heading:hover {
+    background-color: transparent;
+}
+
+.custom-menu-top {
+    position: relative;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.custom-menu-brand {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+.custom-menu-toggle {
+    width: 44px;
+    height: 44px;
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    display: none;
+}
+
+.custom-menu-toggle .bar {
+    background-color: white;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 100px;
+    position: absolute;
+    top: 22px;
+    right: 12px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.custom-menu-toggle .bar:first-child {
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+}
+
+.custom-menu-toggle.x .bar {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.custom-menu-toggle.x .bar:first-child {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.custom-menu-screen {
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    height: 3em;
+    width: 70em;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.custom-menu-tucked .custom-menu-screen {
+    -webkit-transform: translateY(-44px);
+    -moz-transform: translateY(-44px);
+    -ms-transform: translateY(-44px);
+    transform: translateY(-44px);
+}
+
+@media (max-width: 62em) {
+
+    .custom-menu {
+        display: block;
+    }
+
+    .custom-menu-toggle {
+        display: block;
+        display: none\9;
+    }
+
+    .custom-menu-bottom {
+        position: absolute;
+        width: 100%;
+        border-top: 1px solid #eee;
+        background-color: #808080\9;
+        z-index: 100;
+    }
+
+    .custom-menu-bottom .pure-menu-link {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+    .custom-menu-bottom.custom-menu-tucked .pure-menu-link {
+        -webkit-transform: translateX(-140px);
+        -moz-transform: translateX(-140px);
+        -ms-transform: translateX(-140px);
+        transform: translateX(-140px);
+        opacity: 0;
+        opacity: 1\9;
+    }
+
+    .pure-menu-horizontal.custom-menu-tucked {
+        z-index: -1;
+        top: 45px;
+        position: absolute;
+        overflow: hidden;
+    }
+
+}
+</style>
+<div class="header">
+    <div class="home-menu pure-menu-fixed pure-menu pure-menu-horizontal pure-menu-scrollable" id="tuckedMenu">
+        <a href="#" class="pure-menu-heading custom-menu-brand"><span class="font-flash">team.fLASH</span></a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="./about.html" class="pure-menu-link">What is<span class="font-flash">fLASH</span></a></li>
+            <li class="pure-menu-item"><a href="./speedy.html" class="pure-menu-link">Speedy</a></li>
+            <li class="pure-menu-item"><a href="./illeat.html" class="pure-menu-link">I'll eat</a></li>
+            <li class="pure-menu-item"><a href="https://twitter.com/isdjflash" class="pure-menu-link">Offcial Twitter(Korean)</a></li>
+            <li class="pure-menu-item"><a href="http://pbdiary.pw/category/PaperDev/team.fLASH%20%EC%86%8C%EC%8B%9D" class="pure-menu-link">team.fLASH Official Blog(Korean)</a></li>
+            <li class="pure-menu-item"><a href="https://latios.pbdiary.pw/" class="pure-menu-link">Paperbox</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="splash-container">
+    <div class="splash">
+        <h1 class="splash-head">Speedy</h1>
+        <p class="splash-subhead">
+            Multi Platform Bike Racing Game
+        </p>
+        <p>
+            <a href="#" class="pure-button pure-button-primary">Coming Soon</a>
+        </p>
+    </div>
+</div>
+
+<div class="content-wrapper">
+    <div class="content">
+        <h2 class="content-head is-center"></h2>
+
+        <div class="pure-g">
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+
+                <h3 class="content-subhead">
+                    <i class="fa fa-bicycle"></i>
+                    Unique Bicycles
+                </h3>
+                <p>
+                    Win the prize by your unique bicycle
+                </p>
+		<p>
+			* Coming Soon
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+                    <i class="fa fa-person"></i>
+                    Multi Platform, Multi Play, Data Sync
+                </h3>
+                <p>
+                    Compete with your friends - at Windows, Linux, Android, and web.
+                </p>
+		<p>
+			Don't worry about losing  your data. Data syncing is supported. (Comming Soon)
+		<p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ribbon l-box-lrg pure-g">
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+            <h2 class="content-head content-head-ribbon">Easy to get involved</h2>
+            <p>Touch and Key Control makes you easy to play.</p>
+            <p>Background Dotted images are based on real bicycle road.
+            </p>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2 class="content-head is-center">Want to know more?</h2>
+            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+                <h4></h4>
+                <p>
+                    Browse Source <a href="https://github.com/flashdevelopers/speedy">Github Speedy Project</a>
+                </p>
+                <p>
+                    Find news at our blog.<a href="http://pbdiary.pw/category/PaperDev/team.fLASH%20%EC%86%8C%EC%8B%9D">team.fLASH Official Blog</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>©2017- <span class="font-flash">team.fLASH</span>. Hosted by Github Pages / With Paperbox.</p>
+        <p><i class="fa fa-globe"></i>Languages: <a href="./speedy.html>Korean(한국어)</a></p>
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>
