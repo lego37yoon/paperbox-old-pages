@@ -6,7 +6,6 @@
     <meta name="description" content="team.fLASH 공식 웹사이트">
     <title>게임개발동아리 team fLASH</title>
     <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
     <!--[if lte IE 8]>
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
@@ -24,8 +23,15 @@
 </head>
 <body>
 <style>
-body, div, p, h2 {
-    font-family: 'BM JUA', sans-serif;
+@font-face {
+font-family: 'Busan';
+font-style: normal;
+font-weight: 400;
+src: url('//cdn.jsdelivr.net/korean-webfonts/1/orgs/govs/busan/Busan/Busan.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/orgs/govs/busan/Busan/Busan.woff') format('woff');
+}
+
+body, p, h2, a {
+    font-family: 'Busan', sans-serif;
 }
 .font-flash {
     font-family: 'Racing Sans One', cursive;
