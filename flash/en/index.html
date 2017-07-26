@@ -24,19 +24,26 @@
 <body>
 <style>
 @font-face {
-font-family: 'Busan';
+font-family: 'Youth';
 font-style: normal;
 font-weight: 400;
-src: url('//cdn.jsdelivr.net/korean-webfonts/1/orgs/govs/busan/Busan/Busan.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/orgs/govs/busan/Busan/Busan.woff') format('woff');
+src: url('//cdn.jsdelivr.net/korean-webfonts/1/orgs/othrs/kywa/Youth/Youth.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/orgs/othrs/kywa/Youth/Youth.woff') format('woff');
 }
 a:link { text-decoration: none;}
 a:visited { text-decoration: none;}
 a:hover { text-decoration: none;}
 body, p, h2, a, h3 {
-    font-family: 'Busan', sans-serif;
+    font-family: 'Youth', sans-serif;
 }
 .font-flash {
     font-family: 'Racing Sans One', cursive;
+}
+.font-speedy {
+    font-family: 'Youth', sans;
+    font-style: italic;
+}
+.flash {
+    font-style: italic;
 }
 .custom-menu-brand {
     display: block;
@@ -46,14 +53,14 @@ body, p, h2, a, h3 {
 </style>
 <div class="header">
     <div class="home-menu pure-menu-fixed pure-menu pure-menu-horizontal pure-menu-scrollable" id="tuckedMenu">
-        <a href="#" class="pure-menu-heading custom-menu-brand"><span class="font-flash">team.fLASH</span></a>
+        <a href="#" class="pure-menu-heading custom-menu-brand font-flash">team.fLASH</a>
         <ul class="pure-menu-list">
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
-            <li class="pure-menu-item"><a href="./about.html" class="pure-menu-link">What is<span class="font-flash">fLASH</span>?</a></li>
-            <li class="pure-menu-item"><a href="./speedy.html" class="pure-menu-link">Speedy</a></li>
+            <li class="pure-menu-item"><a href="./about.html" class="pure-menu-link font-flash">What is fLASH?</a></li>
+            <li class="pure-menu-item"><a href="./speedy.html" class="pure-menu-link font-speedy">Speedy</a></li>
             <li class="pure-menu-item"><a href="./illeat.html" class="pure-menu-link">I'll eat</a></li>
             <li class="pure-menu-item"><a href="https://twitter.com/isdjflash" class="pure-menu-link">Official Twitter(Korean)</a></li>
-            <li class="pure-menu-item"><a href="http://pbdiary.pw/category/PaperDev/team.fLASH%20%EC%86%8C%EC%8B%9D" class="pure-menu-link">team.fLASH Official Blog(Korean)</a></li>
+            <li class="pure-menu-item"><a href="http://pbdiary.pw/category/PaperDev/team.fLASH%20%EC%86%8C%EC%8B%9D" class="pure-menu-link font-flash">team.fLASH Official Blog(Korean)</a></li>
             <li class="pure-menu-item"><a href="https://latios.pbdiary.pw/index.html" class="pure-menu-link">Paperbox</a></li>
         </ul>
     </div>
@@ -61,12 +68,12 @@ body, p, h2, a, h3 {
 
 <div class="splash-container">
     <div class="splash">
-        <h1 class="splash-head">ISDJ Game Developing Club, team.fLASH</h1>
+        <h1 class="splash-head font-flash">ISDJ Game Developing Club, team.fLASH</h1>
         <p class="splash-subhead">
-            For Windows, Linux, Android and Web, we make game "Speedy"
+            For Windows, Linux, Android and Web, we make game <span class="font-speedy">"Speedy"</span>
         </p>
         <p>
-            <a href="./about.html" class="pure-button pure-button-primary">What is team.fLASH?</a>
+            <a href="./about.html" class="pure-button pure-button-primary font-flash">What is team.fLASH?</a>
         </p>
     </div>
 </div>
@@ -78,7 +85,7 @@ body, p, h2, a, h3 {
         <div class="pure-g">
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
 
-                <h3 class="content-subhead">
+                <h3 class="content-subhead font-speedy">
                     <i class="fa fa-bicycle"></i>
                     Speedy
                 </h3>
