@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <title>하늘구름 Beta - 새로운 종합누리집, 하늘구름</title>
+    <meta charset="utf-8">
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/css/bootstrap.min.css">
+</head>
+    
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">하늘구름 β</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">처음으로</a></li>
+            <li><a href="http://papercube.ml">하늘누리</a></li>
+            <li><a href="http://5c5f.tk">五色五感(오색오감)</a></li>
+            <li><a href="http://lego37.ufree.kr/appstore/">하늘가게</a></li>
+            <li><a href="http://lego37.ufree.kr/ko/sitemap">사이트맵</a></li>
+            <li><a href="http://pbdev.traru.net/">고객지원센터</a></li>
+            <li><a href="http://lego37.ufree.kr/help/wiki.php/하늘구름">도움말</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    <div class="container" align="center">
+
+      <div class="jumbotron">
+        <p></p>
+        <a href="index.html" align="center"><img src="./img/logo.png"></a>
+        <form name="searchone" method="post" onSubmit="return goSearch()">
+                    <script language='javascript'> 
+        function addmore(items) 
+            { 
+                var plussed = ""; 
+                for (var t = 1; t<= items.length ; t++) 
+                    { 
+                        if (items.substring(t-1,t) == " ") 
+                        { 
+                            plussed+="+"; 
+                        } 
+                        else 
+                        { 
+                            plussed+=items.substring(t-1,t); 
+                        } 
+                    } 
+                return plussed; 
+            } 
+
+        // 검색 기능 for Javascript
+        function goSearch() 
+            { 
+                var words; 
+                words = document.searchone.query.value; 
+                var searchitems; 
+                searchitems=addmore(words); 
+                var index; 
+                index = document.searchone.service.selectedIndex; 
+                if (index>= 0) 
+                { 
+                    var site; 
+                    site = document.searchone.service.options[index].value; 
+                    site+=searchitems; 
+                    if (notEmpty(searchitems)) 
+                        { 
+                            //window.open("","mainWin"); 
+                            window.open(site,"_blank"); 
+                            //window.location=site; 
+                        } 
+                } 
+                else 
+                {
+                    alert("검색엔진을 선택하세요.");
+                } 
+                return false;
+            } 
+
+        // Check for empty contents in search searchitems 
+        function notEmpty(word) 
+            { 
+                if (word == "" || word == null) 
+                    { 
+                        self.status="ENTER SEARCH searchitems"; 
+                        alert("검색어는 빈칸일 수 없습니다. 검색어를 입력하세요."); 
+                        document.searchone.query.focus(); 
+                        return false; 
+                    } 
+                 else
+                    {   
+                        alert("검색중...");
+                        return true;
+                    }
+            } 
+
+            function clearIt() 
+                { 
+                    document.searchone.query.value=""; 
+                    document.searchone.query.focus(); 
+                } 
+
+            function FocusOn() 
+                { 
+                    document.searchone.query.focus(); 
+                    return; 
+                } 
+            </script> 
+                <select name="service">
+                    <option value="http://search.naver.com/search.naver?where=nexearch&query=">네이버</option>
+                    <option value="http://www.google.co.kr/#newwindow=1&q=">구글</option> 
+                    <option value="http://search.daum.net/nate?thr=sbma&w=tot&q=">네이트</option> 
+                    <option value="http://search.daum.net/search?w=tot&t__nil_searchbox=btn&q=">다음</option> 
+                    <option value="http://search.yahoo.com/search?p=">야후(미국)</option>
+                    <option value="http://search.zum.com/search.zum?method=uni&option=accu&qm=f_typing.top&query=">줌</option>
+                    <option value="http://www.bing.com/search?q=%EC%95%88%EB%85%95&qs=n&form=QBRE&pq=안녕">Bing(한국어 지원)</option>
+                    <option value="http://www.ask.com/web?qsrc=1&o=0&l=dir&q=">Ask.com(미국)</option>
+                    <option value="http://search.dreamwiz.com/?stype=&scate=0&sdate=0&ssort=1&sctype=0&page=1&origin=1&sword=">드림위즈</option>
+                    <option value="http://search.chol.com/cgi-bin/search.cgi?q=">천리안</option>
+                </select>
+                <input type="text" name="query">
+                    <a href="#" onClick="javascript:goSearch()"><img src="./img/search.png"></a>
+                </input>
+
+        </form>
+      </div>
+
+    </div><!-- /.container -->    
+    <div id="footer">
+      <div class="container">
+        <p>&copy; 2008-2015 팀 종이상자, &copy; 2015-present 하늘구름&#40;팀 종이상자&#41;.</p>
+        <p>호환되는 웹 탐색기:</p>
+        <p><a href="http://modern.ie">인터넷 익스플로러 10~</a></p>
+        <p><a href="http://mozilla.org/firefox/">파이어폭스 15~</a></p>
+        <p><a href="http://chrome.google.com">구글 크롬 30~</a></p>
+        <p><a href="http://midori-browser.org">미도리 0.5.5~</a></p>
+        <p><a href="http://maxthon.com/">Maxthon 4~</a></p>
+        <p>본 누리집은 팀 종이상자의 순수제작으로 만든 종합누리집이며, 웹표준과 최신 기술 &#40;HTML 5, CSS 3, Javascript&#41;을 사용하여 최신 브라우저에서의 호환성이 보장됩니다.</p>
+      </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/js/bootstrap.min.js"></script>
+</body>
+
+</html>
