@@ -7,8 +7,4 @@ This is the baseline file of Github Pages : http://latios.pbdiary.pw
 
 I will upload other files that introduces me, Team YBS, Team fLASH, and my products.
 
-Also, I will gave you some links for contacting me.
-
-This README file has a lot of grammatical errors but I don't have time to correct it.
-
-I will correct after July, 2017.
+My Website Template is under PureCSS's own CSS and for under /cluster folder, CC-BY 4.0 International Lisense is allowed.
