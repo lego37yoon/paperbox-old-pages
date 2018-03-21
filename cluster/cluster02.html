@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>종이상자의 MCCluster 페이지 2(20180321)</title>
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+        @import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+        @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding');
+        h1,li,p,h4,a,article,footer,header {
+            font-family:"Jeju Gothic",맑은 고딕,Malgun Gothic,sans-serif;
+        }
+        h2 {
+            font-family:"Jeju Gothic",맑은 고딕,Malgun Gothic,sans-serif;
+            color:#66CCFF;
+        }
+        pre {
+            font-family: 'Nanum Gothic Coding', monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>종이상자의 모바일 컨텐츠: 2강 자바스크립트</h1>
+        <h2>2018 일산대진고 교육과정 클러스터</h2>
+        <a href="./index.html">1강 둘러보기</a>&nbsp;<a href="./cluster03.html">3강 바로가기</a>
+    </header>
+    <hr>
+    <article>
+        <div id="whatscript">
+            <h3>자바스크립트가 좋은 점!</h3>
+            <li>고급 언어이다!</li>
+                <p>자바스크립트는 고급 언어이기 때문에 사용자가 하지 않아도 알아서 처리해주는 부분이 많다.</p>
+            <li>사용하기 쉽다.</li>
+                <p>어렵지 않은 문법으로 초심자도 쓰기 쉽다.</p>
+            <li>구동하기도 쉽다</li>
+                <p>컴파일 없이 웹 브라우저에 던져주면 쓸 수 있다.</p>
+        </div>
+        <hr>
+        <div id="variables">
+            <h3>변수에 대해 알아보자!</h3>
+            <p>변수에는 여러가지를 저장할 수 있는데, 이 변수는 디스크가 아닌 RAM에 저장된다.</p>
+            <h3>자바스크립트에서의 변수</h3>
+            <p>변수 선언하려면</p>
+            <pre>var x;</pre>
+            <p>변수 값을 정해보자(예시: 1을 값으로 정해보자.</p>
+            <pre>var x= 1;</pre>
+            <p>변수 값을 변경한다면?(1로 처음 정하고 다시 2로 값 변경)</p>
+            <pre>var x= 1;</pre>
+            <pre>x = 2;</pre>
+        </div>
+        <hr>
+        <div id="example1">
+            <h3>예시</h3>
+            <script>
+                var x = 1;
+                alert(x += 1);
+            </script>
+            <p>어떻게 했냐면...</p>
+            <h4>첫번째: x의 내용 출력</h4>
+            <pre>
+                var x = 1;
+                alert(x);
+            </pre>
+            <h4>두번째: 숫자끼리 더해서 출력</h4>
+            <pre>
+                var x = 2;
+                alert(x+1);
+            </pre>
+            <h4>세번째: 문자 출력</h4>
+            <pre>
+                var x = 1;
+                alert("사람들이 많네요.");
+            </pre>
+            <h4>네번째: 문자 +1</h4>
+            <pre>
+                var x = "1";
+                alert(x+1);
+            </pre>
+            <h4>다섯 번째: 숫자 계산</h4>
+            <p>연산자: * 곱하기, + 더하기, / 나누기, % 나눈 나머지, - 빼기</p>
+            <p><b>여섯 번째: 한 번 선언한 var를 두 번 선언하지 않는다.</b></p>
+            <h4>일곱 번째: 플플과 마마</h4>
+            <pre>
+                var x = 1;
+                alert(x++)
+            </pre>
+            <li>++이 앞에 있으면 더하고 저장한 후 출력, ++이 뒤에 있으면 출력하고 더함.(변수에) -- 또한 같은 방식으로 움직인다!</li>
+            <h4>여덞 번째: 대입연산자</h4>
+            <p>+=, -=, *=, %=, /=</p>
+            <pre>
+                var x = 1;
+                alert(x += 1); // 1만큼 더함
+            </pre>
+            <h4>아홉 번째: 논리 연산자</h4>
+            <p>==, >=, <=, !=(같지 않니?), <, > </p>
+            <pre>
+                var x = 1;
+                var y = 3;
+                alert(x != y);
+            </pre>
+            <p>이 경우 true라는 결과 값이 나타난다.</p>
+            <p>만약 변수를 문자로 설정할 경우 ==과 !=만 가능하다. 둘 중 하나만 설정하면 아예 작동하지 않는다.</p>
+        </div>
+        <hr>
+        <div id="movingpic">
+            <button onclick="move()">피카츄, 너로 정했다!</button>
+            <br>
+            <img id="pikachu" src="pika.jpg" style="position:absolute; left:100; top: 100;">
+            <script>
+                function move(){
+                    document.getElementById("pikachu").style.left = "100px";
+                }
+            </script>
+        </div>
+    </article>
+    <footer>
+        <p>(C)2018 종이상자. CC-BY 4.0 International</p>
+    </footer>
+</body>
+</html>
