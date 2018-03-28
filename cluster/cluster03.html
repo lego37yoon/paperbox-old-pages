@@ -1,0 +1,136 @@
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>종이상자의 MCCluster 페이지3(20180328)</title>
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+        @import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+        @import url(//fonts.googleapis.com/css?family=Nanum+Gothic+Coding);
+        h1,li,p,h3,h4,a,article,footer,header {
+            font-family:"Jeju Gothic",맑은 고딕,Malgun Gothic,sans-serif;
+        }
+        h2 {
+            font-family:"Jeju Gothic",맑은 고딕,Malgun Gothic,sans-serif;
+            color:#66CCFF;
+        }
+        pre,xmp {
+            font-family: 'Nanum Gothic Coding', monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>종이상자의 모바일 컨텐츠: 3강</h1>
+        <h2>2018 일산대진고 교육과정 클러스터</h2>
+        <a href="./cluster02.html">2강 둘러보기</a>&nbsp;<a href="./cluster04.html">3강 바로가기</a>
+        <a href="./index.html">첫 강으로 돌아가기</a>
+    </header>
+    <hr>
+    <div id="imagemove">
+        <h3>복습 [1]</h3>
+        <p>저번 주에 했던 스크립트를 짜 봐요.</p>
+        <button type="button" onclick="move()">누르기</button>
+        <br>
+        <img id="person" src="test.png" style="width:100px; position:absolute; left:100px;">
+        <br><br><br><br><br><br><br><br>
+        <script>
+            var x=100; // 글로벌 함수
+            var flag = true //다시 돌아오기위한 방법
+            function move() {
+                if(flag == true){
+                 x += 100; //매번 누를 때마다 100씩 추가   
+                }
+                else{
+                    x-=100; //paperbox 플래그 없을 때
+                }
+                
+                if(x>=500) {
+                    flag = false; //500만큼 갔으면 플래그 변경
+                }
+                else if(x<=100) {
+                    flag =true;
+                }
+                var image = document.getElementById("person");
+                image.style.left = x+"px"; //px는 글자니까
+            }
+        </script>
+        <p>어떻게 했는지는 저번 강을 참고하세요. 저번 강 가기 귀찮다면? 소스보기 or F12 개발자 도구</p>
+    </div>
+    <div id="learnmore">
+        <h3>조금 더 발전된 코딩해보기</h3>
+        <button type="button" onclick="move2()">누르기</button>
+        <br>
+        <img id="person2" src="test.png" style="width:100px; position:absolute; left:100px;">
+        <br><br><br><br><br><br><br><br>
+        <script>
+            var x=100; // 글로벌 함수
+            var flag = true //다시 돌아오기위한 방법
+            function move2() {
+            switch(flag) {
+                case true:
+                    x+=100;
+                    break;
+                case false:
+                    x-=100;
+                    break;
+                default:
+                    break;
+                } 
+                if(x>=500) {
+                    flag = false; //500만큼 갔으면 플래그 변경
+                }
+                else if(x<=100) {
+                    flag =true;
+                }
+                var image = document.getElementById("person2");
+                image.style.left = x+"px"; //px는 글자니까
+            }
+        </script>
+        <p>어떻게 했냐면...</p>
+        <xmp>
+        <button type="button" onclick="move2()">누르기</button>
+        <br>
+        <img id="person2" src="test.png" style="width:100px; position:absolute; left:100px;">
+        <br><br><br><br><br><br><br><br>
+        <script>
+            var x=100; // 글로벌 함수
+            var flag = true //다시 돌아오기위한 방법
+            function move2() {
+            switch(flag) {
+                case true:
+                    x+=100;
+                    break;
+                case false:
+                    x-=100;
+                    break;
+                default:
+                    break;
+                } 
+                if(x>=500) {
+                    flag = false; //500만큼 갔으면 플래그 변경
+                }
+                else if(x<=100) {
+                    flag =true;
+                }
+                var image = document.getElementById("person2");
+                image.style.left = x+"px"; //px는 글자니까
+            }
+        </script>
+        </xmp>
+        <p>Switch 문은 쓰기가 쉽습니다. 경우가 많으면 쓰기 좋죠.</p>
+        <p>삼학연산자</p>
+        <xmp>
+            flag == true ? x+=100;x-=100;
+        </xmp>
+        <p>변수 == 질문? true; false<br>이 경우는 당연히 저 if 문 대신 쓸 수 있습니다. 간단하죠?</p>
+    </div>
+    <hr>
+    <div id="special">
+        <h4>부록</h4>
+        <a href="cluster03_2.html">부록 배우기</a>
+        <a href="cluster03_3.html">부록 예제</a>
+        <a href="cluster03_4.html">마우스 좌표 예제</a>
+        <a href="cluster03_5.html">조이스틱 만들자!</a>
+    </div>
+</body>
+</html>
