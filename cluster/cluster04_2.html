@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>예제 1</title>
+        <script>
+            var box = new Array(3);
+            var wbe = new Array(4);
+            wbe[0] = "Gecko ";
+            wbe [1] = "Trident "
+            wbe [2] = "Servo "
+            wbe [3] = "Webkit "
+            
+            var fruits = new Array(4);
+            fruits [0] = "Apple ";
+            fruits [1] = "Banana ";
+            fruits [2] = "PineApple ";
+            fruits [3] = "Strawberry ";
+            var smartphones = new Array (4);
+            smartphones [0] = "Samsung Galuxy S9 ";
+            smartphones [1] = "LG G7 ThinkQ ";
+            smartphones [2] = "Sony XPERIA XZ2 ";
+            smartphones [3] = "Apple iPhone SE2 ";
+            //반복문 사용하고, document.write() 사용하기!
+            //box에 fruits wbe smartphones 담기
+            box[0] = wbe;
+            box[1] = fruits;
+            box[2] = smartphones;
+            //이중 반복문 사용하여 , 뺴기
+            for(var i=0; i<box.length; i++){
+                var item = box[i];
+                for(var j=0; j<item.length ; j++){
+                    document.write(box[i][j])
+                }
+                document.write("<br>");
+            }
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

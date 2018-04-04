@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>예제 3: 슬라이드 방식 메뉴</title>
+        <style>
+            #menu{
+                background:#ACD1CD;
+            }
+        </style>
+        <script>
+            var targetSize = 50;
+            var a = 0.1;
+            function action(n){
+                targetSize = n;
+            }
+            function init() {
+                setInterval("slide()", 5);
+            }
+            function slide() {
+                var height = document.getElementById("menu").style.height;
+                document.getElementById("menu").style.height = parseInt(height) + a*(targetSize-parseInt(height))+"px";
+            }
+        </script>
+    </head>
+    <body onLoad="init()">
+        <div id="menu" style="width:150px; height: 50px;" onMouseOver="action(500)" onMouseOut="action(50)"></div>
+    </body>
+</html>

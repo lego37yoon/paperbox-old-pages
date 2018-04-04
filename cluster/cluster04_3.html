@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>감속도 운동</title>
+        <script>
+            var i;
+            var st;
+            var a = 0.1;
+            var targetX = 500;
+            var targetY = 500;
+            var me;
+            var info1;
+            var info2;
+            function init(){
+                me = document.getElementById("image");
+                info1 = document.getElementById("info1");
+                info2 = document.getElementById("info2");
+            }
+            function move(){
+                info1.innerText = targetX;
+                info2.innerText = targetY;
+                me.style.top = parseInt(me.style.top)+a*(targetY-parseInt(me.style.top))+"px";
+                me.style.left = parseInt(me.style.left)+a*(targetX-parseInt(me.style.left))+"px";
+                st = setTimeout("move()", 50);
+            }
+            function setPos() {
+                targetX = event.clientX;
+                targetY = event.clientY;
+            }
+            function stop() {
+                clearTimeout(st);
+            }
+        </script>
+    </head>
+    <body onLoad="init()">
+        <div id="container" style="width:100%; height:1000px;" onMouseDown="setPos()">
+            <input type="button" value="start" onClick="move()">
+            <br>
+            목표지점의 X 좌표: <h1 id="info1"></h1>
+            <br>
+            목표지점의 Y 좌표:<h1 id="info2"></h1>
+            <br>
+            <input type="button" value="stop" onClick="stop()">
+            <img id="image" src="pika.jpg" style="position:absolute; left:100px; top:300px">
+         </div>
+    </body>

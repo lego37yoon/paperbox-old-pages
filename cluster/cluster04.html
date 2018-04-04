@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>종이상자의 MCCluster 04강(20180404)</title>
+        <style>
+            @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+            @import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+            @import url(//fonts.googleapis.com/css?family=Nanum+Gothic+Coding);
+            h1,li,p,h3,h4,a,article,footer,header {
+                font-family:"Jeju Gothic",맑은 고딕,Malgun Gothic,sans-serif;
+            }
+            h2 {
+                font-family:"Jeju Gothic",맑은 고딕,Malgun Gothic,sans-serif;
+                color:#66CCFF;
+            }
+            pre,xmp {
+                font-family: 'Nanum Gothic Coding', monospace;
+            }
+            #canvas {
+                width:100%;
+                height:1000px;
+            }
+        </style>
+        <script type="text/javascript">
+            function stamp() { 
+                //도장을 찍는 코드
+                //자바스크립트로 태그 동적 생성
+                var img = document.createElement("img");
+                //<img src="pika.jpg">를 자바스크립트로!
+                img.src = "./pika.jpg";
+                img.style.position="absolute";
+                img.style.left= event.clientX;
+                img.style.top= event.clientY;
+                
+                var canvas = document.getElementById("canvas");
+                canvas.appendChild(img); //붙여라!
+                img.style.width="50px";
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>종이상자의 모바일 컨텐츠: 3강</h1>
+            <h2>2018 일산대진고 교육과정 클러스터</h2>
+            <a href="./cluster03.html">3강 둘러보기</a>&nbsp;<a href="./cluster05.html">5강 바로가기</a>
+        <a href="./index.html">첫 강으로 돌아가기</a>
+        </header>
+        <div id="prevclass">
+            <h1>복습하기!</h1>
+            <p>지난 시간에 놓쳤던 것: case와 default를 두고 조건 명령을 실행할 때에, break를 쓰지 않으면 case를 실행하고 default도 실행한다!</p>
+            <hr>
+        </div>
+        <div id="todayclass">
+            <h1>오늘의 수업: 도장찍기</h1>
+            <p>오늘은 도장 찍기를 해봅니다.</p>
+        </div>
+        <div id="canvas" onMouseDown="stamp()"> <!--마우스를 눌렀을 때 실행할 function 지정-->
+        
+        </div>
+        <ol>
+            <li>head 안 style 태그에 다음과 같이 지정합니다.</li>
+        </ol>
+        <xmp>
+            #canvas {
+                width:100%;
+                height:1000px;
+            }
+        </xmp>
+        <ol start="2">
+            <li>스크립트에 다음과 같이 작성합니다. clientX/Y는 문서 기준, offsetX/Y는 오브젝트 기준 위치, 그리고 screenX/Y는 모니터 기준 위치입니다.</li>
+        </ol>
+        <xmp>
+        <script type="text/javascript">
+            function stamp() { 
+                //도장을 찍는 코드
+                //자바스크립트로 태그 동적 생성
+                var img = document.createElement("img");
+                //<img src="pika.jpg">를 자바스크립트로!
+                img.src = "./pika.jpg";
+                img.style.position="absolute";
+                img.style.left= event.clientX;
+                img.style.top= event.clientY;
+                
+                var canvas = document.getElementById("canvas");
+                canvas.appendChild(img); //붙여라!
+                img.style.width="50px";
+            }
+        </script>
+        </xmp>
+        <ol start="3">
+            <li>도장을 찍을 영역을 설정합니다.</li>
+        </ol>
+        <xmp>
+            <div id="canvas" onMouseDown="stamp()"></div>
+        </xmp>
+        <hr>
+        <div id="todayclass2">
+            <h1>리스트를 쓰고 출력해보자!</h1>
+            <p>항목을 일일이 추가하고 붙여서 출력하는 방법을 짜 봐요!</p>
+            <script>
+            var box = new Array(3);
+            var wbe = new Array(4);
+            wbe[0] = "Gecko";
+            wbe [1] = "Trident"
+            wbe [2] = "Servo"
+            wbe [3] = "Webkit"
+            
+            var fruits = new Array(4);
+            fruits [0] = "Apple";
+            fruits [1] = "Banana";
+            fruits [2] = "PineApple";
+            fruits [3] = "Strawberry";
+            var smartphones = new Array (4);
+            smartphones [0] = "Samsung Galuxy S9";
+            smartphones [1] = "LG G7 ThinkQ";
+            smartphones [2] = "Sony XPERIA XZ2";
+            smartphones [3] = "Apple iPhone SE2";
+            //반복문 사용하고, document.write() 사용하기!
+            //box에 fruits wbe smartphones 담기
+            box[0] = wbe;
+            box[1] = fruits;
+            box[2] = smartphones;
+            //이중 반복문 사용하여 , 뺴기
+            for(var i=0; i<box.length; i++){
+                var item = box[i];
+                for(var j=0; j<item.length ; j++){
+                    document.write(box[i][j])
+                }
+                document.write("<br>");
+            }
+            </script>
+            <a href="cluster04_2.html">여기서 전체 페이지로 볼 수 있습니다.</a>
+            <p>코드는 이렇게 했습니다..</p>
+            <xmp>
+            var box = new Array(3);
+            var wbe = new Array(4);
+            wbe[0] = "Gecko";
+            wbe [1] = "Trident"
+            wbe [2] = "Servo"
+            wbe [3] = "Webkit"
+            
+            var fruits = new Array(4);
+            fruits [0] = "Apple";
+            fruits [1] = "Banana";
+            fruits [2] = "PineApple";
+            fruits [3] = "Strawberry";
+            var smartphones = new Array (4);
+            smartphones [0] = "Samsung Galuxy S9";
+            smartphones [1] = "LG G7 ThinkQ";
+            smartphones [2] = "Sony XPERIA XZ2";
+            smartphones [3] = "Apple iPhone SE2";
+            //반복문 사용하고, document.write() 사용하기!
+            //box에 fruits wbe smartphones 담기
+            box[0] = wbe;
+            box[1] = fruits;
+            box[2] = smartphones;
+            //이중 반복문 사용하여 , 뺴기
+            for(var i=0; i<box.length; i++){
+                var item = box[i];
+                for(var j=0; j<item.length ; j++){
+                    document.write(box[i][j])
+                }
+                document.write("<br>");
+            }
+            </xmp>
+        </div>
+        <div id="todayclass3">
+            <h1>나머지 예제들</h1>
+            <p>궁금하다면? 소스보기(F12)또는 주소 앞에 view-source:붙이기!</p>
+            <a href="cluster04_3.html">예제 2</a>
+            <a href="cluster04_4.html">예제 3</a>
+        </div>
+    </body>
+</html>
