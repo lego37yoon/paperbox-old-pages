@@ -78,12 +78,12 @@
                 //<img src="pika.jpg">를 자바스크립트로!
                 img.src = "./pika.jpg";
                 img.style.position="absolute";
-                img.style.left= event.clientX;
-                img.style.top= event.clientY;
                 
                 var canvas = document.getElementById("canvas");
                 canvas.appendChild(img); //붙여라!
                 img.style.width="50px";
+                img.style.left= event.clientX;
+                img.style.top= event.clientY;
             }
         </xmp>
         <ol start="3">
