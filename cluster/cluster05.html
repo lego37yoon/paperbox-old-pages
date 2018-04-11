@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>종이상자의 MCCluster 05강(20180411)</title>
+        <style>
+            @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+            @import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+            @import url(//fonts.googleapis.com/css?family=Nanum+Gothic+Coding);
+            h1,li,p,h3,h4,a,article,footer,header {
+                font-family:"Jeju Gothic",맑은 고딕,Malgun Gothic,sans-serif;
+            }
+            h2 {
+                font-family:"Jeju Gothic",맑은 고딕,Malgun Gothic,sans-serif;
+                color:#66CCFF;
+            }
+            h2.black {
+                font-family:"Jeju Gothic",맑은 고딕,Malgun Gothic,sans-serif;
+                color:black;
+            }
+            pre,xmp {
+                font-family: 'Nanum Gothic Coding', monospace;
+            }
+            p.code {
+                font-family: 'Nanum Gothic Coding', monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>종이상자의 모바일 컨텐츠: 5강</h1>
+            <h2>2018 일산대진고 교육과정 클러스터</h2>
+            <a href="cluster04.html">3강 둘러보기</a>&nbsp;
+            <a href="cluster06.html">6강 바로가기</a>&nbsp;
+            <a href="index.html">첫 강으로 돌아가기</a>
+            <hr>
+        </header>
+        <article>
+            <h1>1. 화살 날리기와 클래스 만들기</h1>
+                <a href="arrowshot.html">여기로 가서 실행해보자!</a>
+            <h2 class="black">1단계: 기본 코드</h2>
+            <h3>head 안 부분</h3>
+            <xmp>
+                <style>
+                    body {
+                        margin: 0px;
+                    }
+                    #container {
+                        width: 100%;
+                        height: 900px;
+                        background-color: darkcyan;
+                    }
+                </style>
+                <script type="text/javascript">
+                    /*
+                    화살 날리기!!!
+                    화살을 만드는 틀을 만들고, createArrow 할 때 Arrow 함수가 틀을 동작하게 한다!
+                    */
+                    //전역변수
+                    var container;
+                    //형틀. new Arrow(값, 값, 값);
+                    var Arrow = function(top, x, color){
+                        this.span;
+                        this.x = x;
+                        this.top = top;
+                        this.color = color;
+                
+                        this.init= function() {
+                            container = document.getElementById("container");
+                            this.span = document.createElement("span");
+                            this.span.innerHTML = "<h1>→</h1>";
+                            this.span.style.position = "absolute";
+                            this.span.style.left = 0 + "px";
+                            this.span.style.top = this.top + "px";
+                            this.span.style.color = this.color;
+                    
+                        container.appendChild(this.span);
+                        }
+                    }
+                    function createArrow() {
+                        for (var i=0; i<20; i++){
+                            var a1 = new Arrow(i*30, i*10, "white");
+                            a1.init();
+                        }
+                    }
+                </script>
+            </xmp>
+            <h3>body 부분</h3>
+            <xmp>
+                <body onLoad="createArrow()">
+                    <div id="container"></div>
+                </body>
+            </xmp>
+            <h2 class="black">2단계: random 색상 지정</h2>
+            <h3>Javascript 부분: 새로 추가되는 부분 - random.js로 저장 후 <xmp><script src="random.js"></script></xmp>로 지정.</h3>
+            <xmp>
+                function getRandom(max) {
+                    var r = Math.random(); //0.0~ 0.999999
+                    return parseInt(r * max); // 0~1 * 7
+                }
+            </xmp>
+            <h3>Javascript 부분: 수정할 부분</h3>
+            <p class="code">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function createArrow() { <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var colors = ["white","azure","lightgray","lightpink","lightcyan", "peachpuff", "greenyellow"]; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (var i=0; i &lt; 20; i++){ <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var a1 = new Arrow(i*30, i*10, colors[getRandom(colors.length)]); <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a1.init(); <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+            </p>
+            <h2 class="black">3단계: 움직이기</h2>
+            <h3>새로 추가된 부분</h3>
+            <xmp>
+                this.move = function(){
+                    var me = this;
+                    this.x+=5;
+                    this.span.style.left = this.x + "px";
+                    setTimeout(function(){me.move();}, this.interval);
+                }
+            </xmp>
+            <h3>수정할 부분</h3>
+            <p class="code">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function createArrow() {
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var colors = ["white","azure","lightgray","lightpink","lightcyan", "peachpuff", "greenyellow"];
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (var i=0; i &lt; 20; i++){
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var a1 = new Arrow(i*30, i*10, colors[getRandom(colors.length)], getRandom(30));
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a1.init();
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+            </p>
+            <xmp>
+                this.init= function() {
+                    container = document.getElementById("container");
+                    this.span = document.createElement("span");
+                    this.span.innerHTML = "<h1>→</h1>";
+                    this.span.style.position = "absolute";
+                    this.span.style.left = 0 + "px";
+                    this.span.style.top = this.top + "px";
+                    this.span.style.color = this.color;
+                    
+                    container.appendChild(this.span);
+                    this.move();
+                }
+            </xmp>
+            <h3>새로 만드는 부분:var Arrow 안에 </h3>
+            <xmp>
+                this.move = function(){
+                    var me = this;
+                    this.x+=5;
+                    this.span.style.left = this.x + "px";
+                    setTimeout(function(){me.move();}, this.interval);
+                }
+            </xmp>
+            <hr>
+            <h1>두번째: 공튀기기</h1>
+            <a href="bounce.html">가서 공을 튀겨 봅시다.</a>
+            <h2>1단계</h2>
+        </article>
+        <footer>
+            <hr>
+            <p>&#169; 2018 종이상자. CC-BY 4.0 International</p>
+        </footer>
+    </body>
+</html>

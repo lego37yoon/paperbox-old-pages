@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>화살날리기</title>
+        <style>
+            body {
+                margin: 0px;
+            }
+            #container {
+                width: 100%;
+                height: 900px;
+                background-color: darkcyan;
+            }
+        </style>
+        <script src="random.js"></script>
+        <script type="text/javascript">
+            /*
+            화살 날리기!!!
+            화살을 만드는 틀을 만들고, createArrow 할 때 Arrow 함수가 틀을 동작하게 한다!
+            */
+            //전역변수
+            var container;
+            //형틀. new Arrow(값, 값, 값);
+            var Arrow = function(top, x, color, interval){
+                this.span;
+                this.x = x;
+                this.top = top;
+                this.color = color;
+                this.interval = interval;
+                
+                this.init= function() {
+                    container = document.getElementById("container");
+                    this.span = document.createElement("span");
+                    this.span.innerHTML = "<h1>→</h1>";
+                    this.span.style.position = "absolute";
+                    this.span.style.left = 0 + "px";
+                    this.span.style.top = this.top + "px";
+                    this.span.style.color = this.color;
+                    
+                    container.appendChild(this.span);
+                    this.move();
+                }
+                
+                this.move = function(){
+                    var me = this;
+                    this.x+=5;
+                    this.span.style.left = this.x + "px";
+                    setTimeout(function(){me.move();}, this.interval);
+                }
+            }
+            function createArrow() {
+                var colors = ["white","azure","lightgray","lightpink","lightcyan", "peachpuff", "greenyellow"];
+                for (var i=0; i<20; i++){
+                    var a1 = new Arrow(i*30, i*10, colors[getRandom(colors.length)], getRandom(30));
+                    a1.init();
+                }
+            }
+        </script>
+    </head>
+    <body onLoad="createArrow()">
+        <div id="container"></div>
+    </body>
+</html>

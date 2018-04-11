@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>공 튀기기</title>
+        <script src="random.js"></script>
+        <script>
+        function createBall(){
+            if (event.keyCode==32) {
+                var colors = ["red", "blue", "green", "black", "pink", "olive", "purple"];
+                var container = document.getElementById("container");
+                var ball = new Ball(container, getRandom(20), getRandom(20), colors[getRandom(colors.length)]);
+                ball.init();
+            }
+        }
+        
+        var Ball = function(container, velX, velY, color){
+            this.span;
+            this.container = container;
+            this.flagX = true;
+            this.flagY = true;
+            this.x = 0;
+            this.y = 0;
+            this.velX = velX;
+            this.velY = velY;
+            this.color = color;
+            
+            this.init = function(){
+                this.span = document.createElement("span");
+                this.span.style.width = 30 + "px";
+                this.span.style.height = 30 + "px";
+                this.span.innerText = "●";
+                this.span.style.fontSize= 20 + "pt";
+                this.span.style.position="absolute";
+                this.span.style.left= 0 + "px";
+                this.span.style.top= 0 + "px";
+                this.span.style.color = this.color;
+                
+                this.container.appendChild(this.span);
+                
+                this.move();
+            }
+            this.move = function(){
+                //1. 방향체크(값을 더하거나 뺌.)
+                this.flagX ? this.x+=this.velX : this.x-=this.velX;
+                this.flagY ? this.y+=this.velY : this.y-=this.velY;
+                //2. 반영(실제 이동)
+                this.span.style.left = this.x + "px";
+                this.span.style.top = this.y + "px";
+                //3. 방향전환(값을 빼주는 이유는 우리가 보는 것과 브라우저가 인식하는 값이 다르기 때문.)
+                if(this.x>=700-parseInt(this.span.style.width) || this.x <=0) this.flagX = !this.flagX;
+                if(this.y>=700-parseInt(this.span.style.height) || this.y <=0) this.flagY = !this.flagY;
+                //4. 반복시키기
+                var me = this;
+                setTimeout(function(){me.move();}, 10);
+            }
+        }
+    </script>
+    </head>
+    <body onKeyDown="createBall()" style="margin: 0px">
+        <div id="container" style="width: 700px; height: 700px; background:azure; border: 1px blue solid">
+        </div>
+    </body>
+</html>
