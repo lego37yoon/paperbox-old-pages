@@ -1,0 +1,21 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>maeari for blog TISTORY OAuth Token 발급하기</title>
+        <link rel="stylesheet" href="forms-min.css">
+    </head>
+    <body>
+        <h1>maeari for blog TISTORY OAuth Token 발급하기</h1>
+        <p>아래 토큰 값을 앱에 붙어넣어 주세요.</p>
+        <form class="pure-form">
+            <textarea id="token_area" class="pure-input-2-3 pure-input-rounded"></textarea>
+        </form>
+    </body>
+    <script type="text/javascript">
+        var token_url = unescape(location.href);
+        var token_part = (token_url.substring(token_url.indexOf("=")+1,token_url.length));        
+        //var spliting = token_part.split("=");
+        document.getElementById("token_area").innerHTML = token_part;
+    </script>
+    
+</html>
