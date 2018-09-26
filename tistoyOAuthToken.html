@@ -2,22 +2,45 @@
     <head>
         <meta charset="utf-8">
         <title>maeari for blog TISTORY OAuth Token 발급하기</title>
-        <link rel="stylesheet" href="forms-min.css">
+        <link rel="stylesheet" href="./pure-min.css">
+        <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
     </head>
+    <style scoped>
+        .button_redirect {
+            background: darkorange;
+            color: white;
+            border-radius: 15px;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+        }
+    </style>
     <body>
-        <h1>maeari for blog TISTORY OAuth Token 발급하기</h1>
-        <p>자동으로 이동되지 않는 경우, 하단 값을 복사한 후 상단의 X버튼을 눌러 값을 불어넣어 주세요.</p>
-        <form class="pure-form">
-            <textarea id="token_area" class="pure-input-2-3 pure-input-rounded"></textarea>
-        </form>
-        
+        <div class="header">
+            <div class="pure-menu pure-menu-horizontal" >
+                <ul class="pure-menu-list" style="height: 10px">
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="#">maeari</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="#">for blog</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="#">for twitter</a></li>
+                    <li class="pure-menu-item"><a class="pure-menu-link" href="#">for facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content" style="margin-top: 50px">
+            <h1 style="font-family: 'Hi Melody', sans-serif; font-size: 35sp">maeari for blog TISTORY OAuth Token 발급하기</h1>
+            <p style="font-family: 'Hi Melody', sans-serif; font-size: 14sp">자동으로 이동되지 않는 경우, 하단 버튼을 눌러 인증을 완료하세요.</p>
+            <input type="button" onclick="redirect_oauth();" value="바로가기" class="button_redirect pure-button" />
+        </div>
     </body>
     <script type="text/javascript">
         var token_url = unescape(location.href);
         var token_part = (token_url.substring(token_url.indexOf("=")+1,token_url.length));        
         //var spliting = token_part.split("=");
-        document.getElementById("token_area").innerHTML = token_part;
         window.location.href='Intent://oauth_tistory?access_token='+ token_part + '#Intent;scheme=maeariblog;package=pw.pbdiary.maeari.blog';
+        
+        function redirect_oauth() {
+            var token_url = unescape(location.href);
+            var token_part = (token_url.substring(token_url.indexOf("=")+1,token_url.length));        
+            //var spliting = token_part.split("=");
+            window.location.href='Intent://oauth_tistory?access_token='+ token_part + '#Intent;scheme=maeariblog;package=pw.pbdiary.maeari.blog';
+        }
     </script>
-    
 </html>
