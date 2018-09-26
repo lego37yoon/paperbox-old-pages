@@ -6,16 +6,18 @@
     </head>
     <body>
         <h1>maeari for blog TISTORY OAuth Token 발급하기</h1>
-        <p>아래 토큰 값을 앱에 붙어넣어 주세요.</p>
+        <p>자동으로 이동되지 않는 경우, 하단 값을 복사한 후 상단의 X버튼을 눌러 값을 불어넣어 주세요.</p>
         <form class="pure-form">
             <textarea id="token_area" class="pure-input-2-3 pure-input-rounded"></textarea>
         </form>
+        
     </body>
     <script type="text/javascript">
         var token_url = unescape(location.href);
         var token_part = (token_url.substring(token_url.indexOf("=")+1,token_url.length));        
         //var spliting = token_part.split("=");
         document.getElementById("token_area").innerHTML = token_part;
+        window.location.href='Intent://oauth_tistory?access_token='+ token_part + '#Intent;scheme=maeariblog;package=pw.pbdiary.maeari.blog';
     </script>
     
 </html>
