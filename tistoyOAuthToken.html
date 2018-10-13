@@ -35,12 +35,14 @@
         var token_part = (token_url.substring(token_url.indexOf("=")+1,token_url.length));        
         //var spliting = token_part.split("=");
         window.location.href='Intent://oauth_tistory?access_token='+ token_part + '#Intent;scheme=maeariblog;package=pw.pbdiary.maeari.blog';
+        self.close();
         
         function redirect_oauth() {
             var token_url = unescape(location.href);
             var token_part = (token_url.substring(token_url.indexOf("=")+1,token_url.length));        
             //var spliting = token_part.split("=");
             window.location.href='Intent://oauth_tistory?access_token='+ token_part + '#Intent;scheme=maeariblog;package=pw.pbdiary.maeari.blog';
+            self.close();
         }
     </script>
 </html>
