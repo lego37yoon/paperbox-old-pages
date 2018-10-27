@@ -1,0 +1,38 @@
+p {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+a {
+    font-family: 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+footer {
+    font-family: 'Noto Sans KR', Sans-serif;
+    height: 70px;
+    position:absolute;
+    bottom: 0;
+}
+.pbmenu {
+    font-family: 'Gugi', cursive;
+    text-align: center;
+    display: inline;
+    font-size: 110%;
+    color: grey;
+}
+.pbtitle {
+    font-family: 'Comfortaa', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    font-size: 720%;
+    color: grey;
+}
+.pbtitle2 {
+    font-family: 'Cute Font', sans-serif;
+    text-align: right;
+    text-decoration: none;
+    color: grey;
+    font-size: 200%;
+}
+.pbheader {
+    text-align: right;
+}
