@@ -1,7 +1,8 @@
 <html lang="ko">
     <head>
         <meta charset="utf-8">
-        <title>maeari for blog TISTORY OAuth Token 발급하기</title>
+        <meta name="viewport" content="width=device-width">
+        <title>maeari for blog TISTORY OAuth Code 발급하기</title>
         <link rel="stylesheet" href="./pure-min.css">
         <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
     </head>
@@ -25,7 +26,7 @@
             </div>
         </div>
         <div class="content" style="margin-top: 50px">
-            <h1 style="font-family: 'Hi Melody', sans-serif; font-size: 35sp">maeari for blog TISTORY OAuth Token 발급하기</h1>
+            <h1 style="font-family: 'Hi Melody', sans-serif; font-size: 35sp">maeari for blog TISTORY OAuth Code 발급하기</h1>
             <p style="font-family: 'Hi Melody', sans-serif; font-size: 14sp">자동으로 이동되지 않는 경우, 하단 버튼을 눌러 인증을 완료하세요.</p>
             <input type="button" onclick="redirect_oauth();" value="바로가기" class="button_redirect pure-button" />
         </div>
@@ -34,14 +35,14 @@
         var token_url = unescape(location.href);
         var token_part = (token_url.substring(token_url.indexOf("=")+1,token_url.length));        
         //var spliting = token_part.split("=");
-        window.location.href='maeariblog://oauth_tistory?access_token='+ token_part;
+        window.location.href='maeariblog://oauth_tistory?code='+ token_part;
         //self.close();
         
         function redirect_oauth() {
             var token_url = unescape(location.href);
             var token_part = (token_url.substring(token_url.indexOf("=")+1,token_url.length));        
             //var spliting = token_part.split("=");
-            window.location.href='maeariblog://oauth_tistory?access_token='+ token_part;
+            window.location.href='maeariblog://oauth_tistory?code='+ token_part;
             //self.close();
         }
     </script>
