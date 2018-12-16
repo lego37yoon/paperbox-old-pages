@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="297.10446mm"
+   height="289.74103mm"
+   viewBox="0 0 297.10446 289.74102"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="C:\Users\lego3\Documents\GitHub\lego37yoon.github.io\hncity\logo.png"
+   inkscape:export-xdpi="299.19891"
+   inkscape:export-ydpi="299.19891">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient2333"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#696969;stop-opacity:1;"
+         offset="0"
+         id="stop2331" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="144.46463"
+     inkscape:cy="376.3536"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showborder="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1600"
+     inkscape:window-height="877"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     transform="translate(0.632497,0.63249989)">
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#69c8c3;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect831"
+       width="38.316055"
+       height="72.333916"
+       x="115.16481"
+       y="186.8521" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#69c8c3;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect831-7"
+       width="38.904682"
+       height="59.315399"
+       x="157.71414"
+       y="204.1039" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(194.68036,-71.018592)">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot823"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1866.66674805px;line-height:1.25;font-family:SeoulHangang;-inkscape-font-specification:SeoulHangang;letter-spacing:0px;word-spacing:0px;fill:#69c8c3;fill-opacity:1;fill-rule:nonzero;stroke:#4aecba;stroke-width:4.78110266;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       transform="scale(0.26458333)"
+       inkscape:export-xdpi="299.19891"
+       inkscape:export-ydpi="299.19891"><flowRegion
+         id="flowRegion825"
+         style="font-size:1866.66674805px;fill:#69c8c3;fill-opacity:1;fill-rule:nonzero;stroke:#4aecba;stroke-width:4.78110266;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"><rect
+           id="rect827"
+           width="2282.8572"
+           height="2134.2856"
+           x="-1017.1429"
+           y="-294.62317"
+           style="font-size:1866.66674805px;fill:#69c8c3;fill-opacity:1;fill-rule:nonzero;stroke:#4aecba;stroke-width:4.78110266;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /></flowRegion><flowPara
+         id="flowPara829"
+         style="font-size:1866.66674805px;fill:#69c8c3;fill-opacity:1;fill-rule:nonzero;stroke:#4aecba;stroke-width:4.78110266;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">ㅎ</flowPara></flowRoot>  </g>
+</svg>

@@ -2,9 +2,12 @@ p {
     font-family: 'Noto Sans KR', sans-serif;
 }
 a {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Gugi', sans-serif;
     text-decoration: none;
-    color: black;
+    color: grey;
+}
+body {
+    background-color: black
 }
 footer {
     font-family: 'Noto Sans KR', Sans-serif;
@@ -20,14 +23,14 @@ footer {
     color: grey;
 }
 .pbtitle {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Gugi', sans-serif;
     text-align: center;
     text-decoration: none;
     font-size: 720%;
     color: grey;
 }
 .pbtitle2 {
-    font-family: 'Cute Font', sans-serif;
+    font-family: 'Gugi', sans-serif;
     text-align: right;
     text-decoration: none;
     color: grey;
@@ -35,4 +38,16 @@ footer {
 }
 .pbheader {
     text-align: right;
+    color: grey;
+    position: absolute;
+    margin-top: -80px;
+    margin-left: -20px;
+}
+.icons {
+    color: grey;
+}
+.pbspace {
+    font-family: 'Comfortaa', sans-serif;
+    color: grey;
+    text-decoration: none;
 }
