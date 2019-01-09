@@ -8,13 +8,14 @@ a {
     color: grey;
 }
 body {
-    background-color: black
+    background-color: black;
 }
 footer {
     font-family: 'Noto Sans KR', Sans-serif;
     height: 70px;
     position:absolute;
     bottom: 0;
+    color:grey;
 }
 .pbmenu {
     font-family: 'Gugi', cursive;
