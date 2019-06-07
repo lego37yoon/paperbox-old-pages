@@ -12,13 +12,9 @@
 <body>
     <div id="search" style="width: 25%; height: 100%;">
     </div>
-    <div id="map" style="width: 75%;">
+    <div id="map" style="width: 75%; height: 350px;">
     </div>
-    <script>
-        var container = document.getElementById('map');
-        container.style.height = window.innerHeight
-    </script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c1313f4e69c916081f7a6a991c3f19ff"></script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c1313f4e69c916081f7a6a991c3f19ff"></script>
 	<script>
 		var container = document.getElementById('map');
         
@@ -27,6 +23,11 @@
 			level: 3
 		};
 		var map = new daum.maps.Map(container, options);
+
+		container.style.height = window.innerHeight;
+		map.relayout();
+
+
 	</script>
 </body>
 </html>
