@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>지도</title>
@@ -11,25 +11,46 @@
 </head>
 <body>
     <div id="search" style="width: 25%; height: 100%;">
-<p>여기는 지도 영역이 아니에요 ㅠㅠ</p>
+<p>테스트용 텍스트</p>
     </div>
     <div id="map" style="width: 75%; height: 350px;">
     </div>
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c1313f4e69c916081f7a6a991c3f19ff"></script>
-	<script>
-		var container = document.getElementById('map');
-        
-		var options = {
-			center: new daum.maps.LatLng(33.450701, 126.570667),
-			level: 3
-		};
-		var map = new daum.maps.Map(container, options);
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c1313f4e69c916081f7a6a991c3f19ff"></script>
+    <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+        center: new daum.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+        };  
 
-		container.style.height = window.innerHeight + 'px';
+        var map = new daum.maps.Map(container, options);
 
-		map.relayout();
+        function setMapType(maptype) { 
+            var roadmapControl = document.getElementById('btnRoadmap');
+            var skyviewControl = document.getElementById('btnSkyview'); 
+            if (maptype === 'roadmap') {
+                map.setMapTypeId(daum.maps.MapTypeId.ROADMAP);    
+                roadmapControl.className = 'selected_btn';
+                skyviewControl.className = 'btn';
+            } else {
+                map.setMapTypeId(daum.maps.MapTypeId.HYBRID);    
+                skyviewControl.className = 'selected_btn';
+                roadmapControl.className = 'btn';
+            }
+        }
 
+        // 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+        function zoomIn() {
+            map.setLevel(map.getLevel() - 1);
+        }
+        // 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+        function zoomOut() {
+            map.setLevel(map.getLevel() + 1);
+        }
 
-	</script>
+        container.style.height = window.innerHeight + 'px';
+
+        map.relayout();
+   </script>
 </body>
 </html>
