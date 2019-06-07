@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>지도</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>지도</title>
+    <!--cols = 세로/ rows = 가로-->
+    <frameset cols = "25%, *">
+        <frame src = "frame1.html">
+        <frame src = "frame2.html">
+    </frameset>
 </head>
+
+<html>
+    <head>
+        <title> 첫번째 화면 </title>
+    </head>
+
+    <body bgcolor = "#ffeedd">
+    1st Frame
+    </body>
+</html>
+
+<html>
+    <head>
+        <title> 두번째 화면 </title>
+    </head>
+
+    <body bgcolor = "#ff77ff">
+    2st Frame
+    </body>
+</html>
+
 <body>
     <div id="map" style="width:500px;height:400px;"></div>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3deb8942f4b8a4527d1dad3d5b5ce381"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c1313f4e69c916081f7a6a991c3f19ff "></script>
    <script>
       var canvas = document.getElementById("map");
       var context = canvas.getContext("2d");
@@ -19,7 +45,6 @@
                 center: new daum.maps.LatLng(33.450701, 126.570667),
                 level: 3
             };
-    
             var map = new daum.maps.Map(container, options);
         </script>
 </body>
