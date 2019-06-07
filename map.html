@@ -14,10 +14,14 @@
     </div>
     <div id="map" style="width: 75%;">
     </div>
+    <script>
+        var container = document.getElementById('map');
+        container.style.height = window.innerHeight
+    </script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c1313f4e69c916081f7a6a991c3f19ff"></script>
 	<script>
 		var container = document.getElementById('map');
-        container.style.height = window.innerHeight
+        
 		var options = {
 			center: new daum.maps.LatLng(33.450701, 126.570667),
 			level: 3
