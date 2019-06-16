@@ -100,4 +100,14 @@ function copy() {
         element_wrap.style.display = 'block';
     }
 </script>
+<script>
+function copy() {
+  var dummy = document.createElement("textarea");
+  document.body.appendChild(dummy);
+  dummy.value = document.getElementById('address')
+  dummy.select();
+  document.execCommand("copy");
+  document.body.removeChild(dummy);
+}
+</script>
 </body>
