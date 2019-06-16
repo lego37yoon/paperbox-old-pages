@@ -14,7 +14,7 @@
 function copy() {
   var dummy = document.createElement("textarea");
   document.body.appendChild(dummy);
-  dummy.value = document.getElementById('address')
+  dummy.value = document.getElementById('address').value;
   dummy.select();
   document.execCommand("copy");
   document.body.removeChild(dummy);
