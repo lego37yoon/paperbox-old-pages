@@ -7,18 +7,17 @@
 <body>
   <div id="main">
     <form class="pure-form">
-      <input type="text" id="postcode" placeholder="우편번호" class="pure-input-rounded">
+      <input type="text" id="postcode" placeholder="우편번호">
       <input type="button" onclick="execDaumPostcode()" value="주소 찾기" class="pure-button"><br>
-      <input type="text" id="address" placeholder="주소" class="pure-input-rounded"><br>
-      <input type="text" id="extraAddress" placeholder="참고항목" class="pure-input-rounded">
+      <input type="text" id="address" placeholder="주소"><br>
+      <input type="text" id="extraAddress" placeholder="참고항목">
       <button onclick="copy()" class="pure-button">클립보드 복사</button>
     </form>
   </div>
   <div id="wrap" style="display:none;border:1px solid;width:500px;height:300px;margin:5px 0;position:relative">
     <img src="//t1.daumcdn.net/postcode/resource/images/close.png" id="btnFoldWrap" style="cursor:pointer;position:absolute;right:0px;top:-1px;z-index:1" onclick="foldDaumPostcode()" alt="접기 버튼">
   </div>
-  <hr>
-  <footer>
+  <footer style="backgroud-color: #E3E3DA">
     <p><a href="https://zetawiki.com/wiki/%EC%88%9C%EC%88%98_%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_%ED%81%B4%EB%A6%BD%EB%B3%B4%EB%93%9C_%EB%B3%B5%EC%82%AC_%EA%B5%AC%ED%98%84">제타위키</a>및 <a href="http://postcode.map.daum.net/guide#sample">다음 우편번호 서비스 샘플을 참조했습니다.</a></p>
     <p>본 기능은 PureCSS를 사용합니다.</p>
     <p>&copy; 2019 윤정민</p>
