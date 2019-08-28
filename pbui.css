@@ -1,3 +1,4 @@
+@font-face { font-family: 'NIXGONM-Vb'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/NIXGONM-Vb.woff') format('woff'); font-weight: normal; font-style: normal; }
 p {
     font-family: 'Noto Sans KR', sans-serif;
     color: grey;
@@ -18,21 +19,21 @@ footer {
     color: grey;
 }
 .pbmenu {
-    font-family: 'Gugi', sans-serif;
+    font-family: 'NIXGONM-Vb', sans-serif;
     text-align: center;
     display: inline;
     font-size: 110%;
     color: grey;
 }
 .pbtitle {
-    font-family: 'Gugi', sans-serif;
+    font-family: 'NIXGONM-Vb', sans-serif;
     text-align: center;
     text-decoration: none;
     font-size: 720%;
     color: grey;
 }
 .pbtitle2 {
-    font-family: 'Gugi', sans-serif;
+    font-family: 'NIXGONM-Vb', sans-serif;
     text-align: right;
     text-decoration: none;
     color: grey;
@@ -49,7 +50,7 @@ footer {
     color: grey;
 }
 .pbspace {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'NIXGONM-Vb', sans-serif;
     color: grey;
     text-decoration: none;
 }
