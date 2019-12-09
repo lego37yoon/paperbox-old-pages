@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(font-awesome.min.css);
+@import url(all.min.css);
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR:300&subset=korean');
 
 /*
@@ -2470,7 +2470,6 @@
 
 	.image {
 		border: 0;
-		display: inline-block;
 		position: relative;
 		box-shadow: 0px 0px 0px 7px #fff, 0px 0px 0px 8px rgba(0, 0, 0, 0.1);
 	}
@@ -2502,7 +2501,6 @@
 		.image.fit {
 			display: block;
 			margin: 0 0 2em 0;
-			width: 100%;
 		}
 
 			.image.fit img {
@@ -3475,12 +3473,12 @@
 				
 				/* Normal Menu Icon */
 				#header > a[href="#menu"]:before {
-					content: "";
+					content: "";
 					-moz-osx-font-smoothing: grayscale;
 					-webkit-font-smoothing: antialiased;
-					font-family: FontAwesome;
+					font-family: 'Font Awesome 5 Free';
 					font-style: normal;
-					font-weight: normal;
+					font-weight: 900;
 					text-transform: none !important;
 				}
 
@@ -3659,9 +3657,9 @@
 				content: "";
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
+				font-family: 'Font Awesome 5 Free';
 				font-style: normal;
-				font-weight: normal;
+				font-weight: 900;
 				text-transform: none !important;
 			}
 
@@ -3746,13 +3744,14 @@
 
 		#banner h1 {
 			font-size: 4em;
-			margin-bottom: .25em;
+			margin-bottom: .05em;
 			color: #FFF;
 		}
 
 		#banner p {
 			color: rgba(255, 255, 255, 0.85);
 			font-size: 1.75em;
+            margin-bottom: .05em;
 		}
 
 	@-moz-keyframes more {
