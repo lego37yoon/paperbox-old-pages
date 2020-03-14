@@ -1,5 +1,0 @@
-<a href="https://space.pbdiary.pw">pbspace</a>
-
-<i class="fas fa-globe"></i>
-                    <a href="./en/index.html">ENG</a>
-                    <a href="#">KOR</a>
