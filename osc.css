@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+    font-family: 'NEXON Lv1 Gothic OTF Light', sans-serif;
+    color: grey;
+}
+a {
+    font-family: 'NEXON Lv1 Gothic OTF Light', sans-serif;
+    text-decoration: none;
+    color: grey;
+}
+footer {
+    font-family: 'NEXON Lv1 Gothic OTF Light', sans-serif;
+    color: grey;
+}
+article {
+    text-align: center;
+    height: 60vh;
+}
+header {
+    height: 28vh;
+}
+.background-image {
+    background-color: black;
+    display: block;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.pbmenu {
+    font-family: 'NEXON Lv1 Gothic OTF Light', sans-serif;
+    text-align: center;
+    margin-right: 10px;
+    display: inline;
+    font-size: 110%;
+    color: grey;
+}
+.pbtitle {
+    font-family: 'Comfortaa', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    font-size: 720%;
+    color: grey;
+}
+.pbMiddleTitle {
+    font-family: 'NEXON Lv1 Gothic OTF Light', sans-serif;
+    text-align: right;
+    text-decoration: none;
+    color: grey;
+    font-size: 150%;
+}
+@media screen and (max-width:530px) {
+    .pbtitle {
+        font-family: 'Comfortaa', sans-serif;
+        text-align: center;
+        text-decoration: none;
+        font-size: 500%;
+        color: grey;
+    }
+    article {
+        height: 53vh;
+    }
+
+}
+@media screen and (max-width:365px) {
+    .pbtitle {
+        font-family: 'Comfortaa', sans-serif;
+        text-align: center;
+        text-decoration: none;
+        font-size: 300%;
+        color: grey;
+    }
+    .pbMiddleTitle {
+        font-family: 'NEXON Lv1 Gothic OTF Light', sans-serif;
+        text-align: right;
+        text-decoration: none;
+        color: grey;
+        font-size: 120%;
+    }
+    article {
+        height: 53vh;
+    }
+}
+@media screen and (max-height:400px) {
+    article {
+        height: auto;
+    }
+}
+
+.pbheader {
+    float: right;
+    margin-top: 0px;
+}
+.icons {
+    color: grey;
+}
+.sitemap {
+    font-family: 'NEXON Lv1 Gothic OTF Light', sans-serif;
+    color: grey;
+    text-decoration: none;
+}
