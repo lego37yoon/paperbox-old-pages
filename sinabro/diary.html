@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>시나브로 다이어리</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&amp;subset=korean">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
@@ -15,16 +15,57 @@
 <body>
     <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="font-family: 'Noto Serif KR', serif;">
         <div class="container-fluid"><a class="navbar-brand" href="index.html" style="font-family: 'Noto Serif KR', serif;">시나브로</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div
-                class="collapse navbar-collapse" id="navcol-1">
+            <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link shadow-sm" href="#">다이어리</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link shadow-sm" href="elecLibrary.html">전자책장</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link shadow-sm" href="browser.html">브라우저</a></li>
+                    <li class="nav-item"><a class="nav-link shadow-sm" href="diary.html">다이어리</a></li>
+                    <li class="nav-item"><a class="nav-link shadow-sm" href="#">전자책장</a></li>
+                    <li class="nav-item"><a class="nav-link shadow-sm" href="browser.html">꼬마사전</a></li>
                 </ul>
-        </div>
+            </div>
         </div>
     </nav>
+    <h1 class="display-4" style="margin: 20px 30px 50px;font-family: 'Noto Serif KR', serif;">떠오르는<br>생각을<br>바로바로</h1>
+    <div>
+        <div class="container-fluid text-center">
+            <div class="row">
+                <div class="col-md-3"><a class="btn btn-outline-light btn-block btn-lg text-center text-dark" role="button" style="margin-left: 0px;font-family: 'Noto Serif KR', serif;height: auto;"><i class="icon-screen-desktop" style="margin-right: 10px;"></i>데스크톱용</a></div>
+                <div class="col-md-3"><a class="btn btn-outline-light btn-block btn-lg text-center text-dark" role="button" style="margin-left: 0px;font-family: 'Noto Serif KR', serif;height: auto;"><i class="icon-screen-smartphone" style="margin-right: 10px;"></i>Android용</a></div>
+                <div class="col-md-3"><a class="btn btn-outline-light btn-block btn-lg text-center text-dark" role="button" style="margin-left: 0px;font-family: 'Noto Serif KR', serif;height: auto;"><i class="icon-social-github" style="margin-right: 10px;"></i>Github에서 만나기</a></div>
+                <div class="col-md-3"><a class="btn btn-outline-light btn-block btn-lg text-center text-dark" role="button" style="font-family: 'Noto Serif KR', serif;height: auto;"><i class="icon-layers" style="margin-right: 10px;"></i>오픈소스 라이선스</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="features-clean" style="font-family: 'Noto Serif KR', serif;">
+        <div class="container">
+            <div class="intro"></div>
+            <div class="row features">
+                <div class="col-sm-6 col-lg-4 item"><i class="icon-clock icon" style="color: rgb(20,173,238);"></i>
+                    <h3 class="name">밤, 낮을 가리지 않고</h3>
+                    <p class="description">밖이 밝아도, 어두워도 편안하게 글을 쓸 수 있도록.<br>야간 모드를 지원합니다.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="icon-size-fullscreen icon" style="color: rgb(20,173,238);"></i>
+                    <h3 class="name">집중하기 편안한 깔끔한 구성</h3>
+                    <p class="description">오직 글쓰기에만 집중할 수 있도록,<br>잡다한 기능은 줄이고 필요한 구성만 남겼습니다.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="icon-pencil icon" style="color: rgb(20,173,238);"></i>
+                    <h3 class="name">놓칠 수 없는 익숙함</h3>
+                    <p class="description">당연히 글꼴이나 배경색을 지정하는 것도 가능합니다. 명조 계열 글꼴이라도 모든 글꼴이 같은 모양은 아니니까요.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="icon-magic-wand icon" style="color: rgb(20,173,238);"></i>
+                    <h3 class="name">하나로 합치기</h3>
+                    <p class="description">글들을 하나로 모아 PDF, Word 문서, 자체 형식으로 만들어 구성할 수 있습니다.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="icon-screen-smartphone icon" style="color: rgb(20,173,238);"></i>
+                    <h3 class="name">휴대폰에서도 편하게</h3>
+                    <p class="description">휴대폰에서도 편하게 글을 쓸 수 있도록, 모바일 앱을 제공합니다.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="icon-share-alt icon" style="color: rgb(20,173,238);"></i>
+                    <h3 class="name">자유로운 사용조건</h3>
+                    <p class="description">재배포 및 수정이 가능한 라이선스로 언제든 맘에 들지 않는 부분을 고쳐 사용하실 수 있습니다. 물론 다른 이름으로 재배포도 가능합니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="footer-clean" style="font-family: 'Noto Serif KR', serif;">
         <footer>
             <div class="container">
@@ -46,9 +87,9 @@
                         </ul>
                     </div>
                     <div class="col-sm-4 col-md-3 item">
-                        <h3>브라우저</h3>
+                        <h3>꼬마사전</h3>
                         <ul>
-                            <li><a href="browser.html">소개</a></li>
+                            <li><a href="littledic.html">소개</a></li>
                             <li><a href="#">출시 이력</a></li>
                             <li><a href="#">오픈소스 라이선스</a></li>
                         </ul>
@@ -61,7 +102,7 @@
         </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
